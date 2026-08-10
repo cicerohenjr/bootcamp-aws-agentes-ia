@@ -43,6 +43,12 @@ Tabela com as etapas executadas com sucesso:
 
 ![Tabela de execução das etapas](images/05-tabela-execucao-etapas-sucesso.png)
 
+## Arquivos do projeto
+
+- `step-functions/assistente-delivery.asl.json`: definição da máquina de estado criada no AWS Step Functions.
+- `examples/input-pedido.json`: exemplo de entrada JSON usado na execução de teste.
+- `images/`: evidências visuais da criação e execução do fluxo.
+
 ## Tecnologias e serviços utilizados
 
 - AWS Step Functions
