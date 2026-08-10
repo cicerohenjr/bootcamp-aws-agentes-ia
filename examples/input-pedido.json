@@ -1,0 +1,8 @@
+{
+  "pedidoId": "PED-001",
+  "cliente": "Cicero",
+  "statusPagamento": "aprovado",
+  "item": "Pedido de delivery",
+  "canal": "app",
+  "etapaSimuladaIA": true
+}
