@@ -21,6 +21,28 @@ Fluxo criado:
 
 Status: execução realizada com sucesso no AWS Step Functions.
 
+## Evidências da execução
+
+Fluxo criado no AWS Step Functions:
+
+![Fluxo no AWS Step Functions](01-fluxo-step-functions.png.png)
+
+Execução realizada com sucesso:
+
+![Execução com sucesso](02-execucao-com-sucesso.png.png)
+
+Entrada JSON utilizada no teste:
+
+![Entrada JSON do pedido](03-entrada-json-pedido.png.png)
+
+Etapa simulada de resposta com IA:
+
+![Resposta simulada da IA](04-resposta-simulada-ia.png.png)
+
+Tabela com as etapas executadas com sucesso:
+
+![Tabela de execução das etapas](05-tabela-execucao-etapas-sucesso.png.png)
+
 ## Tecnologias e serviços utilizados
 
 - AWS Step Functions
