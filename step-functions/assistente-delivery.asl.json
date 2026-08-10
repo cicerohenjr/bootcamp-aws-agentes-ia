@@ -1,0 +1,24 @@
+{
+  "StartAt": "ReceberPedido",
+  "States": {
+    "ReceberPedido": {
+      "Type": "Pass",
+      "Next": "ValidarPagamento"
+    },
+    "ValidarPagamento": {
+      "Type": "Pass",
+      "Next": "PrepararEntrega"
+    },
+    "PrepararEntrega": {
+      "Type": "Pass",
+      "Next": "RespostaSimuladaIA"
+    },
+    "RespostaSimuladaIA": {
+      "Type": "Pass",
+      "End": true
+    }
+  },
+  "QueryLanguage": "JSONata",
+  "Comment": "Fluxo simulado de um assistente de delivery usando AWS Step Functions. A etapa de IA foi simulada devido à indisponibilidade temporária do Amazon Bedrock na conta.",
+  "TimeoutSeconds": 600
+}
