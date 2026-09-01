@@ -47,7 +47,8 @@ A execução do fluxo foi realizada com sucesso no AWS Step Functions, incluindo
 
 - `step-functions/assistente-delivery.asl.json`: definição da máquina de estado criada no AWS Step Functions.
 - `examples/input-pedido.json`: exemplo de entrada JSON utilizado na execução de teste.
-- `images/bedrock/`: evidências visuais da criação, execução e integração com o Amazon Bedrock.
+ - `images/step-functions/`: evidências visuais da criação e execução do fluxo no AWS Step Functions.
+- `images/bedrock/`: evidências visuais da integração e execução com o Amazon Bedrock. 
 
 ## Tecnologias e serviços utilizados
 
