@@ -1,1 +1,45 @@
-
+{
+  "StartAt": "ReceberPedido",
+  "States": {
+    "ReceberPedido": {
+      "Type": "Pass",
+      "Next": "ValidarPagamento"
+    },
+    "ValidarPagamento": {
+      "Type": "Pass",
+      "Next": "PrepararEntrega"
+    },
+    "PrepararEntrega": {
+      "Type": "Pass",
+      "Next": "RespostaBedrock"
+    },
+    "RespostaBedrock": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::bedrock:invokeModel",
+      "Arguments": {
+        "ModelId": "amazon.nova-micro-v1:0",
+        "Body": {
+          "messages": [
+            {
+              "role": "user",
+              "content": [
+                {
+                  "text": "Responda em uma frase curta: o pedido PED-001 foi recebido e está sendo preparado para entrega."
+                }
+              ]
+            }
+          ],
+          "inferenceConfig": {
+            "maxTokens": 100,
+            "temperature": 0.2
+          }
+        }
+      },
+      "Output": "{% $states.result %}",
+      "End": true
+    }
+  },
+  "QueryLanguage": "JSONata",
+  "Comment": "Fluxo de um assistente de delivery usando AWS Step Functions com integração real ao Amazon Bedrock e ao modelo Amazon Nova Micro.",
+  "TimeoutSeconds": 600
+}
